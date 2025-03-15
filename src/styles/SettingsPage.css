@@ -1,0 +1,133 @@
+.settings-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .settings-form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-group {
+    justify-content: space-between;
+  }
+  
+  .range-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .save-button {
+    background-color: #27ae60;
+    color: white;
+    flex: 2;
+  }
+  
+  .save-button:hover {
+    background-color: #2ecc71;
+  }
+  
+  .reset-button {
+    background-color: #95a5a6;
+    color: white;
+    flex: 1;
+  }
+  
+  .reset-button:hover {
+    background-color: #7f8c8d;
+  }
+  
+  .back-link {
+    display: block;
+    text-align: center;
+    color: #2980b9;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Iconos usando Unicode o fuentes de iconos */
+  .location-icon:before {
+    content: "📍";
+  }
+  
+  .settings-icon:before {
+    content: "⚙️";
+  }
+  
+  .time-icon:before {
+    content: "⏱️";
+  }
+  
+  .send-icon:before {
+    content: "📤";
+  }
+  
+  /* Media queries para diseño responsive */
+  @media (min-width: 768px) {
+    .content {
+      flex-direction: row;
+    }
+    
+    .location-panel, .settings-panel {
+      flex: 1;
+    }
+  }
+  
+  /* Animaciones para mejor experiencia de usuario */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .location-panel, .settings-panel {
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  /* Estilos para notificaciones */
+  .notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .notification-success {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .notification-error {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .notification-info {
+    background-color: #3498db;
+    color: white;
+  }
