@@ -6,7 +6,7 @@ const authService = {
   // Iniciar sesión
   login: async (email, password, apiUrl) => {
     try {
-      const response = await fetch(apiUrl || 'http://45.234.117.236:5000/api/login', {
+      const response = await fetch(apiUrl || 'https://45.234.117.236:5000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
